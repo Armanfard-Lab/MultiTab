@@ -1,0 +1,16 @@
+model:
+  type: 'mt'
+  name: 'stem'
+  num_task_experts: 2
+  num_shared_experts: 4 
+  num_layers: 1
+  expert_hidden_dims: [256, 128]
+  tower_hidden_dims: [64]
+  embed_dim: 16
+training:
+  epochs: 100
+  lr: 0.001
+  optimizer: 'adam'
+  weight_decay: 0.00001
+  batch_size: 2048
+  dropout: 0.2

@@ -1,0 +1,31 @@
+name: multitab
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.1
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - h5py
+  - jupyter
+  - ipykernel
+  - tqdm
+  - pyyaml
+  - pip
+  - pip:
+    - pytorch-lightning>=2.0
+    - torchmetrics
+    - easydict
+    - openml
+    - xgboost
+    - wandb  # optional, for experiment tracking
+    - rotary-embedding-torch

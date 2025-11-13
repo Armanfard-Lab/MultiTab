@@ -1,0 +1,15 @@
+data:
+  format: h5
+  name: acs_income
+  num_features: 10
+  path: /acs_income/
+  short_name: inc
+  task_out_dim:
+    MAR: 5
+    PINCP: 1
+  task_type:
+    MAR: classification
+    PINCP: binary
+  tasks:
+  - PINCP
+  - MAR

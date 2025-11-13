@@ -1,0 +1,12 @@
+model:
+  type: 'st'
+  name: 'st_mlp'
+  hidden_dims: [256, 128, 64]
+  embed_dim: 16
+training:
+  epochs: 100
+  lr: 0.001
+  optimizer: 'adam'
+  weight_decay: 0.00001
+  batch_size: 2048
+  dropout: 0.2

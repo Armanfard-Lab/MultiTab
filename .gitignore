@@ -1,0 +1,6 @@
+*.pyc
+wandb/*
+lightning_logs/*
+tabular_mtl/*
+logs/*
+*.txt

@@ -1,0 +1,33 @@
+data:
+  format: h5
+  name: higgs
+  num_features: 21
+  path: /higgs/
+  short_name: hig
+  task_out_dim:
+    Target: 1
+    m_bb: 1
+    m_jj: 1
+    m_jjj: 1
+    m_jlv: 1
+    m_lv: 1
+    m_wbb: 1
+    m_wwbb: 1
+  task_type:
+    Target: binary
+    m_bb: regression
+    m_jj: regression
+    m_jjj: regression
+    m_jlv: regression
+    m_lv: regression
+    m_wbb: regression
+    m_wwbb: regression
+  tasks:
+  - Target
+  - m_jj
+  - m_jjj
+  - m_lv
+  - m_jlv
+  - m_bb
+  - m_wbb
+  - m_wwbb

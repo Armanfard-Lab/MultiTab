@@ -1,0 +1,237 @@
+st_mlp:
+  model:
+    parameters:
+      type:
+        value: 'st'
+      name: 
+        value: 'st_mlp'
+      hidden_dims:
+        values: [[64], [128], [256], [512], [128, 64], [256, 128]]
+  training:
+    parameters:
+      epochs:
+        value: 100
+      lr:
+        values: [0.0001, 0.001, 0.01, 0.1]
+      optimizer:
+        values: ['adam', 'sgd']
+      batch_size: 
+        values: [16, 32, 64]
+      dropout: 
+        values: [0.00, 0.10, 0.20, 0.30]
+mt_mlp:
+  model:
+    parameters:
+      type:
+        value: 'mt'
+      name:
+        value: 'mt_mlp'
+      shared_hidden_dims:
+        values: [[64], [128], [256], [512], [128, 64], [256, 128]]
+      task_hidden_dims:
+        values: [[], [32], [64]]
+  training:
+    parameters: 
+      epochs:
+        value: 100
+      lr: 
+        values: [0.0001, 0.001, 0.01, 0.1]
+      optimizer:
+        values: ['adam', 'sgd']
+      batch_size:
+        values: [16, 32, 64, 128]
+      dropout:
+        values: [0.0, 0.1, 0.2, 0.3]
+mmoe:
+  model:
+    parameters:
+      type:
+        value: 'mt'
+      name:
+        value: 'mmoe'
+      num_experts:
+        values: [2, 4, 8]
+      expert_hidden_dims:
+        values: [[64], [128], [256], [128, 64]]
+      tower_hidden_dims:
+        values: [[], [32], [64]]
+  training:
+    parameters:
+      epochs:
+        value: 100
+      lr:
+        values: [0.0001, 0.001, 0.01, 0.1]
+      optimizer:
+        values: ['adam', 'sgd']
+      batch_size:
+        values: [16, 32, 64]
+      dropout: 
+        values: [0.0, 0.1, 0.2]
+
+ple:
+  model:
+    parameters:
+      type:
+        value: 'mt'
+      name:
+        value: 'ple'
+      num_task_experts:
+        values: [1, 2, 4]
+      num_shared_experts: 
+        values: [1, 2, 4] 
+      num_layers: 
+        values: [1, 2, 3]
+      expert_hidden_dims:
+        values: [[64], [128], [256], [128, 64]]
+      tower_hidden_dims:
+        values: [[], [32], [64]]
+  training:
+    parameters:
+      epochs:
+        value: 100
+      lr:
+        values: [0.0001, 0.001, 0.01, 0.1]
+      optimizer:
+        values: ['adam', 'sgd']
+      batch_size:
+        values: [16, 32, 64]
+      dropout: 
+        values: [0.0, 0.1, 0.2]
+
+stem:
+  model:
+    parameters:
+      type: 
+        value: 'mt'
+      name:
+        value: 'stem'
+      num_task_experts:
+        values: [1, 2, 4]
+      num_shared_experts:
+        values: [1, 2, 4] 
+      num_layers:
+        values: [1, 2, 3]
+      expert_hidden_dims:
+        values: [[64], [128], [256], [128, 64]]
+      tower_hidden_dims:
+        values: [[], [32], [64]]
+      embed_dim:
+        values: [8, 16, 32]
+  training:
+    parameters:
+      epochs:
+        value: 100
+      lr:
+        values: [0.0001, 0.001, 0.01, 0.1]
+      optimizer:
+        values: ['adam', 'sgd']
+      batch_size:
+        values: [16, 32, 64]
+      dropout: 
+        values: [0.0, 0.1, 0.2]
+
+tabt:
+  model:
+    parameters:
+      type:
+        value: 'st'
+      name:
+        value: 'tabt'
+      n_blocks:
+        values: [1, 2, 3]
+      n_heads:
+        values: [1, 2, 4]
+      embed_dim:
+        values: [8, 16, 32]
+      ff_hid_dim:
+        values: [32, 64, 128]
+      tower_hidden_dims:
+        values: [[], [32], [64], [64, 32]]
+  training:
+    parameters:
+      epochs:
+        value: 100
+      lr:
+        values: [0.0001, 0.001, 0.01, 0.1]
+      optimizer:
+        values: ['adam', 'sgd']
+      batch_size:
+        values: [32, 64, 128, 256]
+      dropout: 
+        values: [0.0, 0.1, 0.2, 0.3]
+
+ftt:
+  model:
+    parameters:
+      type:
+        value: 'st'
+      name:
+        value: 'ftt'
+      n_blocks:
+        values: [2]
+      n_heads:
+        values: [4]
+      embed_dim: 
+        values: [8]
+      ff_hid_dim:
+        values: [256]
+      tower_hidden_dims:
+        values: [[64]]
+  training:
+    parameters:
+      epochs:
+        value: 50
+      lr:
+        values: [0.0001, 0.001]
+      weight_decay:
+        values: [0.0, 0.000001, 0.00001]
+      optimizer:
+        values: ['adamw']
+      batch_size:
+        values: [2048]
+      ff_dropout: 
+        values: [0.0, 0.1, 0.2]
+      att_dropout:
+        values: [0.0, 0.1, 0.2]
+
+mtt:
+  model:
+    parameters:
+      type:
+        value: 'mt'
+      name:
+        value: 'mtt'
+      n_blocks:
+        values: [1]
+      n_heads:
+        values: [4]
+      embed_dim: 
+        values: [8]
+      ff_hid_dim:
+        values: [256]
+      tower_hid_dims:
+        values: [[64]]
+      att_type:
+        values: ['row_col']
+      mask_mode_if:
+        values: ['none', 'TxT']
+      multi_token:
+        values: [true]
+      rope:
+        values: [true]
+  training:
+    parameters:
+      epochs:
+        value: 50
+      lr:
+        values: [0.001]
+      weight_decay:
+        values: [0.00001]
+      optimizer:
+        values: ['adamw']
+      batch_size:
+        values: [2048]
+      ff_dropout: 
+        values: [0.0, 0.1, 0.2]
+      att_dropout:
+        values: [0.0, 0.1, 0.2]

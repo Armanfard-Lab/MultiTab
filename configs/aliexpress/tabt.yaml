@@ -1,0 +1,17 @@
+model:
+  type: 'st'
+  name: 'tabt'
+  n_blocks: 1
+  n_heads: 4
+  embed_dim: 8
+  ff_hid_dim: 256
+  tower_hidden_dims: [64]
+
+training:
+  epochs: 50
+  lr: 0.001
+  optimizer: 'adam'
+  batch_size: 2048
+  weight_decay: 0.000001
+  ff_dropout: 0.1
+  att_dropout: 0.1

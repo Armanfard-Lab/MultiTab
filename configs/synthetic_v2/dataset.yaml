@@ -1,0 +1,10 @@
+data:
+  name: 'synthetic_v2'
+  short_name: 'syn_v2'
+  split: 0.7
+  num_tasks: 7 # k
+  num_features: 32 # d
+  correlation: 0.4 # p
+  poly_degrees: [1, 3, 2, 3, 4, 2, 3] # d
+  noise_levels: [0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01] # sigma
+  num_samples: 1000000

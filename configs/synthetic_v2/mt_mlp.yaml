@@ -1,0 +1,13 @@
+model:
+  type: 'mt'
+  name: 'mt_mlp'
+  shared_hidden_dims: [256]
+  task_hidden_dims: [128]
+
+training:
+  epochs: 10
+  lr: 0.001
+  optimizer: 'adam'
+  weight_decay: 0.000001
+  batch_size: 512
+  dropout: 0.0

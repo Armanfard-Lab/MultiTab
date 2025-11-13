@@ -1,0 +1,12 @@
+data:
+  name: 'aliexpress'
+  short_name: 'ali'
+  split: 0.8
+  path: '/AliExpress_NL/'
+  tasks: ['click', 'conversion']
+  task_type: {'click': 'binary', 'conversion': 'binary'}
+  task_out_dim: {'click': 1, 'conversion': 1}
+  num_features: 75
+  num_train_samples: 12157894
+  pos_weights: {'click': 48.62993170620196, 'conversion': 1364.441823899371} # neg/pos ratio
+  num_test_samples: 5559301
