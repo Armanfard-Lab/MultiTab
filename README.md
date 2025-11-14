@@ -1,6 +1,8 @@
 <div align="center">
-<h1>MultiTab: A Scalable Foundation for Multitask Learning on Tabular Data</h1>
+<h1>[AAAI'26] MultiTab: A Scalable Foundation for Multitask Learning on Tabular Data</h1>
 </div>
+
+[![ArXiv](https://img.shields.io/badge/ArXiv-2511.09970-red)](https://arxiv.org/abs/2511.09970)
 
 <div align="center">
 <img src="figures/multitab.png" style="width: 4000px; height: auto;">
@@ -115,3 +117,17 @@ Once you have set up your datasets, you can run experiments using the provided t
    ```
 
 The script will automatically start training with the specified configuration and save results to the logs directory.
+
+## **📚 Citation**
+If you use this code or find our work helpful, please cite:
+```bibtex
+@misc{sinodinos2025multitabscalablefoundationmultitask,
+      title={MultiTab: A Scalable Foundation for Multitask Learning on Tabular Data}, 
+      author={Dimitrios Sinodinos and Jack Yi Wei and Narges Armanfard},
+      year={2025},
+      eprint={2511.09970},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2511.09970}, 
+}
+```
