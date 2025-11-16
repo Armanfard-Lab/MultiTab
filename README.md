@@ -49,7 +49,7 @@ The easiest way to set up all datasets is to use our preprocessed H5 files avail
 1. **Configure the data root directory:**
    Edit `download_data.sh` and set your desired data root:
    ```bash
-   DATA_ROOT="/path/to/your/data/root"
+   DATA_ROOT="/path/to/your/data/"
    ```
 
 2. **Make the script executable:**
