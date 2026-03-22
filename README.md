@@ -2,6 +2,7 @@
 <h1>[AAAI'26] MultiTab: A Scalable Foundation for Multitask Learning on Tabular Data</h1>
 </div>
 
+[![AAAI](https://img.shields.io/badge/AAAI-2026-blue)](https://ojs.aaai.org/index.php/AAAI/article/view/39745)
 [![ArXiv](https://img.shields.io/badge/ArXiv-2511.09970-red)](https://arxiv.org/abs/2511.09970)
 
 <div align="center">
@@ -44,7 +45,7 @@ This project supports three datasets for multitask learning experiments:
 
 ### Quick Setup (Recommended)
 
-The easiest way to set up all datasets is to use our preprocessed H5 files available on Hugging Face:
+The easiest way to set up all datasets is to use our preprocessed H5 files available on [Hugging Face](https://huggingface.co/datasets/Dimitri-Sinodinos/multitab/tree/main):
 
 1. **Configure the data root directory:**
    Edit `download_data.sh` and set your desired data root:
@@ -98,13 +99,13 @@ The script will automatically start training with the specified configuration an
 ## **📚 Citation**
 If you use this code or find our work helpful, please cite:
 ```bibtex
-@misc{sinodinos2025multitabscalablefoundationmultitask,
-      title={MultiTab: A Scalable Foundation for Multitask Learning on Tabular Data}, 
-      author={Dimitrios Sinodinos and Jack Yi Wei and Narges Armanfard},
-      year={2025},
-      eprint={2511.09970},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2511.09970}, 
+@inproceedings{sinodinos2026multitab,
+  title={MultiTab: A Scalable Foundation for Multitask Learning on Tabular Data},
+  author={Sinodinos, Dimitrios and Wei, Jack Yi and Armanfard, Narges},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={40},
+  number={30},
+  pages={25499--25507},
+  year={2026}
 }
 ```
